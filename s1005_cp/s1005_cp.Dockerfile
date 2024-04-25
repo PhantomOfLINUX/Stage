@@ -25,6 +25,10 @@ USER $stage
 RUN mkdir /home/$stage/test
 WORKDIR /home/$stage/test
 
+# Q1 환경 구성
+RUN cp -r /usr/stage_file/Q1/documents /home/$stage/test/documents
+RUN cp -r /usr/stage_file/Q1/archives /home/$stage/test/archives
+
 WORKDIR /usr/agent
 
 # 웹소켓 서버 실행 명령. 'ws_pty.js'는 웹소켓 서버의 메인 파일이라고 가정합니다.

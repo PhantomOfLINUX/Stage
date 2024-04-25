@@ -2,8 +2,8 @@
 FROM polhub/ws-base:s1004
 
 # 기존 환경 변수 및 사용자 설정을 유지할 수 있습니다.
-ENV stage=s1004
-ARG stage=s1004
+ENV stage=s1005
+ARG stage=s1005
 
 # 사용자 추가
 RUN useradd -ms /bin/bash $stage

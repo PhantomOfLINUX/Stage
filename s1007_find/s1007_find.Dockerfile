@@ -21,6 +21,7 @@ RUN rm -rf start.sh
 
 # 소유권 변경
 RUN chown -R $stage /home/$stage
+RUN chown adam /usr/stage_file/dir3/dir31/dir313/eve
 
 # 사용자 변경
 USER $stage

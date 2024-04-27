@@ -1,27 +1,27 @@
-# s1003 touch mkdir rm
-## 3-1
-- touch 기본 명령어
+# s1005 cp
+## 5-1
+- cp documents/report.txt archives/report.txt
 - 채점형
-- 질문 : test디렉토리안에 A.txt 파일을 생성하시오.
+- 질문 : test 디렉토리로 들어가 documents 디렉토리에 있는 report.txt 파일을 archives 디렉토리로 복사하십시오.
 - 답 : 채점 파일 실행
-## 3-2
-- mkdir 기본 명령어
+## 5-2
+- cp report/monthly_report.txt report/backup_report.txt
 - 채점형
-- 질문 : test디렉토리안에 dr1 디렉토리를 생성하시오.
+- 질문 : test 디렉토리로 들어가 report 디렉토리 내에 있는 monthly_report.txt 파일을 같은 디렉토리에 backup_report.txt라는 이름으로 복사하십시오.
 - 답 : 채점 파일 실행
-## 3-3
-- mkdir -p (중첩 디렉토리 생성)
+## 5-3
+- cp -r config config_backup
 - 채점형
-- 질문 : Hello.txt파일안 내용 끝에 good을 추가로 붙이시오
+- 질문 : config 디렉토리를 config_backup 이름의 디렉토리로 복사하십시오.
 - 답 : 채점 파일 실행
-## 3-4
-- cat, >
+## 5-4
+- cp -n backup_dir4/*.txt dir4/
 - 채점형
-- 질문 : original.txt 파일안에 있는 내용을 copy.txt 파일을 생성하여 copy.txt 파일로 옮기시오.
+- 질문 : test디렉토리 안에서 backup_dir4 디렉토리에 있는 모든 .txt 파일을 dir4 디렉토리로 복사하십시오. 단, 기존 파일은 덮어쓰지 않도록 합니다.
 - 답 : 채점 파일 샐행
-## 3-5
-- cat, >>
+## 5-5
+- cp -r dir5/* dir5_backup/
 - 채점형
-- 질문 : sample1.txt 파일안에 있는 내용을 sample2.txt 파일 내용의 끝으로 복사하시오.
+- 질문 : dir5 디렉토리 내의 숨김파일을 제외한모든 파일 및 디렉토리를 dir5_backup 디렉토리로 복사하되, dir5 디렉토리 자체는 복사하지 마십시오.
 - 답 : 채점 파일 실행
 

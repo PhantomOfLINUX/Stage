@@ -21,7 +21,12 @@ RUN rm -rf start.sh
 
 # 소유권 변경
 RUN chown -R $stage /home/$stage
+#Q2 환경 설계
 RUN chown adam /usr/stage_file/dir3/dir31/dir313/eve
+#Q3 환경 설계
+RUN touch -t 195003151230.00 /usr/stage_file/dir1/dir11/dir112/olddlo
+#Q4 환경 설계
+RUN truncate -s 100M /usr/stage_file/dir3/dir33/dir333/big_and_huge
 
 # 사용자 변경
 USER $stage

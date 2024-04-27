@@ -1,27 +1,27 @@
 # s1003 touch mkdir rm
 ## 7-1
-- touch 기본 명령어
-- 채점형
-- 질문 : test디렉토리안에 A.txt 파일을 생성하시오.
-- 답 : 채점 파일 실행
+- find . -type f -name "*.linux"
+- 단답형
+- 질문 : test 디렉토리와 test 디렉토리의 하위 디렉토리에서 .linux 확장자를 가진 모든 파일의 이름은? (답 예시: apple.linux)
+- 답 : OS.linux
 ## 7-2
-- mkdir 기본 명령어
-- 채점형
-- 질문 : test디렉토리안에 dr1 디렉토리를 생성하시오.
-- 답 : 채점 파일 실행
+- find / -type f -user adam
+- 단답형
+- 질문 : 시스템 전체를 탐색해 사용자 'adam'이 소유한 파일의 이름을 구하시오?
+- 답 : eve
 ## 7-3
-- mkdir -p (중첩 디렉토리 생성)
-- 채점형
-- 질문 : Hello.txt파일안 내용 끝에 good을 추가로 붙이시오
-- 답 : 채점 파일 실행
+- find . -type f -mtime +3500
+- 단답형
+- 질문 : test 디렉토리와 test 디렉토리의 하위 디렉토리에서 수정된 지 10년이 넘은 파일의 이름은?
+- 답 : olddlo
 ## 7-4
-- cat, >
-- 채점형
-- 질문 : original.txt 파일안에 있는 내용을 copy.txt 파일을 생성하여 copy.txt 파일로 옮기시오.
-- 답 : 채점 파일 샐행
+- find . -type f -size +100M 
+- 단답형
+- 질문 : test 디렉토리와 test 디렉토리의 하위 디렉토리에서 100MB 이상의 파일들을 찾으세요.
+- 답 : big_and_huge
 ## 7-5
-- cat, >>
+- find . -type f -name "*.tmp" -delete
 - 채점형
-- 질문 : sample1.txt 파일안에 있는 내용을 sample2.txt 파일 내용의 끝으로 복사하시오.
+- 질문 : test 디렉토리와 test 디렉토리의 하위 디렉토리에서 .tmp 확장자를 가진 모든 파일을 찾아 삭제하세요. 
 - 답 : 채점 파일 실행
 

@@ -26,8 +26,9 @@ RUN mkdir /home/$stage/test
 WORKDIR /home/$stage/test
 
 # Q1 환경 구성
-RUN cp -r /usr/stage_file/Q1/documents /home/$stage/test/documents
-RUN mkdir /home/$stage/test/archives
+RUN cp -r /usr/stage_file/dir1 /home/$stage/test/dir1
+RUN cp -r /usr/stage_file/dir2 /home/$stage/test/dir2
+RUN cp -r /usr/stage_file/dir3 /home/$stage/test/dir3
 
 WORKDIR /usr/agent
 

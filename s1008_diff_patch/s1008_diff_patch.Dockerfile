@@ -29,7 +29,6 @@ RUN mkdir /home/$stage/test
 WORKDIR /home/$stage/test
 
 # Q1 환경 구성
-RUN mkdir /home/$stage/test
 WORKDIR /home/$stage/test
 RUN cp /usr/stage_file/Q1/A1 /home/$stage/test/A1
 RUN cp /usr/stage_file/Q1/A2 /home/$stage/test/A2

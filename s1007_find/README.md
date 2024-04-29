@@ -1,4 +1,4 @@
-# s1003 touch mkdir rm
+# s1007 touch mkdir rm
 ## 7-1
 - find . -type f -name "*.linux"
 - 단답형

@@ -9,9 +9,6 @@ ARG stage=s1008
 RUN useradd -ms /bin/bash $stage
 RUN echo "$stage:0000" | chpasswd
 
-RUN useradd -ms /bin/bash adam
-RUN echo "adam:0000" | chpasswd
-
 #접속시 출력 화면 파일 복사
 COPY start.sh /home/$stage/
 COPY stage_file /usr/stage_file

@@ -1,0 +1,10 @@
+Hmm...  Looks like a unified diff to me...
+The text leading up to this was:
+--------------------------
+|--- A1	2024-04-29 09:50:52.398841254 +0000
+|+++ A2	2024-04-29 09:50:52.398841254 +0000
+--------------------------
+patching file A1
+Using Plan A...
+Hunk #1 succeeded at 1.
+done

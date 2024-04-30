@@ -1,4 +1,4 @@
-# s1008 diff patch
+# s1003 touch mkdir rm
 ## 8-1
 - diff A1 A2
 - 단답형

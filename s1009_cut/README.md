@@ -1,28 +1,28 @@
 # s1009 cut
 ## 9-1
-- diff A1 A2
+- cut -c 23 c1.txt
 - 단답형
-- 질문 : test 디렉토리의 파일 A1, A2를 비교했을 때, 각각 몇번째 줄에서 차이가 나는지 말하시오.
-- 답 : A : 3 , B : 3
+- 질문 : test 디렉토리의 c1.txt 파일의 각 행에서 23번째로 나오는 글자들을 연결하면 나오는 단어는?
+- 답 : rocky
 ## 9-2
-- diff -u A1 A2 > A1toA2.patch
+- cut -c 5- c2.txt > new_c2.txt
 - 채점형
-- 질문 : diff의 -u 옵션을 사용하여 test 디렉토리의 파일 A1에서 A2로의 패치파일 A1toA2.patch 를 생성하시오.
+- 질문 : test 디렉토리의 c2.txt 파일의 각행의 첫번째로 나오는 “text”를 삭제하여 new_c2.txt파일을 만드시오.
 - 답 : 채점파일실행
 ## 9-3
-- patch A1 A1toA2.patch
+- cut -d “,” -f 1 d3.txt > d3_name.csv
 - 채점형
-- 질문 : test 디렉토리의 파일 A1에 패치파일 A1toA2.patch를 패치시키시오.
+- 질문 : test 디렉토리의 쉼표로 필드가 구분된 파일 d3.csv 에서 name에 해당하는 필드만 추출하여 d3_name.csv 파일을 만드시오. (d3_name.csv 파일에는 “name”이 가장 상단 행에 위치해야 합니다.)
 - 답 : 채점파일실행
 ## 9-4
-- patch -b A1 A1toA2.patch
+- cut -d “,” -f 2-3 d4.csv > d4_name.csv
 - 채점형
-- 질문 : test 디렉토리의 파일 A1에 패치파일 A1toA2.patch를 패치시키시오. 이때 A1.orig라는 이름의 백업파일도 생성하시오.
+- 질문 : test 디렉토리의 쉼표로 필드가 구분된 파일 d4.csv 에서 email 과 phone 에 해당하는 필드만 추출하여 d4_email_phone.csv 파일을 만드시오. (d4_email_phone.csv 파일에는 “email,phone”이 가장 상단 행에 위치해야 합니다.)
 - 답 : 채점파일실행
 ## 9-5
-- patch -R A1 A1toA2.patch
+- cut -s -d "," --output-delimiter=" : " -f 1- d5.csv > new_d5.csv
 - 채점형
-- 질문 : test 디렉토리의 파일 A1에 패치파일 A1toA2.patch를 거꾸로 패치시키시오.
+- 질문 : test 디렉토리의 파일 d5.csv의 필드 구분자를 쉼표에서 “ : “ (공백)콜론(공백)으로 바꾸고 공백인 행을 삭제한 파일 new_d5.csv 파일을 만드시오. (new_d5.csv 파일에는 “name : email : phone”이 가장 상단 행에 위치해야 합니다.)
 - 답 : 채점 파일 실행
 
 

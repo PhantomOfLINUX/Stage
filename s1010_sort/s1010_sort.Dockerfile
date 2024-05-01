@@ -27,7 +27,7 @@ WORKDIR /home/$stage/test
 
 # Q1 환경 구성
 WORKDIR /home/$stage/test
-RUN cp /usr/stage_file/Q1/c1.txt /home/$stage/test/c1.txt
+RUN cp /usr/stage_file/Q1/A1.txt /home/$stage/test/A1.txt
 
 WORKDIR /usr/agent
 

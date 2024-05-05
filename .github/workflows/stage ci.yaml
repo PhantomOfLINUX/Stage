@@ -67,6 +67,7 @@ jobs:
                   CLEANED_TAG="${CONTEXT%%_*}"
                   docker build -f ./${CONTEXT}/${CONTEXT}.Dockerfile -t ${{ secrets.DOCKERHUB_ORGANIZATIONS }}/$CLEANED_TAG:latest .
                   docker push ${{ secrets.DOCKERHUB_ORGANIZATIONS }}/$CLEANED_TAG:latest
+                  echo "Docker image pushed: $CLEANED_TAG:latest"
 
             - name: Cleanup Docker images
               run: docker rmi ${{ secrets.DOCKERHUB_ORGANIZATIONS }}/$CLEANED_TAG:latest

@@ -35,7 +35,7 @@ jobs:
             - name: Find directories
               id: find-dir
               run: |
-                  echo '{"matrix":'"$(ls -d */ | grep -E 's10[0-9]{2}_' | xargs -n 1 basename | jq -R . | jq -s)"'}' | jq '.' > dirs.json
+                  echo '{"matrix":'"$(ls -d */ | grep -E 's1001_' | xargs -n 1 basename | jq -R . | jq -s)"'}' | jq '.' > dirs.json
                   cat dirs.json
 
             - name: Set output

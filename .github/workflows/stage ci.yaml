@@ -66,6 +66,7 @@ jobs:
 
             - name: Build and push Docker image
               run: |
+                  echo "Context: $CONTEXT, Cleaned Tag: $CLEANED_TAG"
                   CONTEXT="${{ matrix.context }}"
                   CLEANED_TAG="${CONTEXT%%_*}"
                   docker build -f ./${CONTEXT}/${CONTEXT}.Dockerfile -t ${{ secrets.DOCKERHUB_ORGANIZATIONS }}/$CLEANED_TAG:latest ./${CONTEXT}

@@ -1,28 +1,48 @@
-# s1011 cut
-## 9-1
-- cut -c 23 c1.txt
+# s1011 grep
+## 11-1
+- grep "error" A1.txt > A1_error.txt
 - 단답형
-- 질문 : test 디렉토리의 c1.txt 파일의 각 행에서 23번째로 나오는 글자들을 연결하면 나오는 단어는?
+- 질문 : test디렉토리의 data.txt 파일에서 "error"라는 단어가 포함된 모든 라인을 찾아 그 결과를 error.txt에 저장하시오.
 - 답 : rocky
-## 9-2
-- cut -c 5- c2.txt > new_c2.txt
+## 11-2
+- grep -i "warning" A2.txt > A2_warning.txt
 - 채점형
-- 질문 : test 디렉토리의 c2.txt 파일의 각행의 첫번째로 나오는 “text”를 삭제하여 new_c2.txt파일을 만드시오.
+- 질문 : test디렉토리의 A2.txt 파일에서 "Warning"이라는 단어를 대소문자 구분 없이 찾아 그 결과를 A2_warning.txt에 저장하시오.
 - 답 : 채점파일실행
-## 9-3
-- cut -d “,” -f 1 d3.txt > d3_name.csv
+## 11-3
+- grep -n "Failed" A3.txt > A3_Failed.txt
 - 채점형
-- 질문 : test 디렉토리의 쉼표로 필드가 구분된 파일 d3.csv 에서 name에 해당하는 필드만 추출하여 d3_name.csv 파일을 만드시오. (d3_name.csv 파일에는 “name”이 가장 상단 행에 위치해야 합니다.)
+- 질문 : test디렉토리의 A3.txt 파일에서 "Failed"라는 단어가 포함된 모든 라인을 찾고, 각 라인의 행 번호도 함께 출력한 결과를 A3_Failed.txt에 저장하시오.
 - 답 : 채점파일실행
-## 9-4
-- cut -d “,” -f 2-3 d4.csv > d4_name.csv
+## 11-4
+- grep -c "2023" A4.txt
+- 단답형
+- 질문 : test디렉토리의 A4.txt 파일에서 "2023"라는 숫자가 몇 번 나오는지 세세요.
+- 답 : 11
+## 11-5
+- grep -w "the" A5.txt > A5_the.txt
 - 채점형
-- 질문 : test 디렉토리의 쉼표로 필드가 구분된 파일 d4.csv 에서 email 과 phone 에 해당하는 필드만 추출하여 d4_email_phone.csv 파일을 만드시오. (d4_email_phone.csv 파일에는 “email,phone”이 가장 상단 행에 위치해야 합니다.)
-- 답 : 채점파일실행
-## 9-5
-- cut -s -d "," --output-delimiter=" : " -f 1- d5.csv > new_d5.csv
+- 질문 : test디렉토리의 A5.txt파일에서 "the"라는 단어가 정확히 "the"로만 사용된 모든 경우를 찾아 그 결과를 A5_the.txt 에 저장하시오
+- 답 : 채점 파일 실행
+## 11-6
+- grep "localhost" *.txt > localhost.txt
 - 채점형
-- 질문 : test 디렉토리의 파일 d5.csv의 필드 구분자를 쉼표에서 “ : “ (공백)콜론(공백)으로 바꾸고 공백인 행을 삭제한 파일 new_d5.csv 파일을 만드시오. (new_d5.csv 파일에는 “name : email : phone”이 가장 상단 행에 위치해야 합니다.)
+- 질문 : test디렉토리에서 grep을 사용하여 현재 디렉토리의 모든 .txt 파일에서 "localhost"라는 단어를 검색하여 나온 결과를 localhost.txt에 저장하시오.
+- 답 : 채점 파일 실행
+## 11-7
+- grep -v "theme" A7.txt > A7_no_theme.txt
+- 채점형
+- 질문 : test디렉토리의 A7.txt 파일에서 "theme"라는 단어를 포함하지 않는 모든 라인을 찾아 그 결과를 A7_no_theme.txt에 저장하시오.
+- 답 : 채점 파일 실행
+## 11-8
+- grep -E "error|warning" A8.txt > A8_error_warning.txt
+- 채점형
+- 질문 : test디렉토리의 A8.txt 파일에서 "error" 또는 "warning"이라는 단어를 포함하는 라인을 찾고 그 결과를 A8_error_warning.txt에 저장하시오.
+- 답 : 채점 파일 실행
+## 11-9
+- grep "^Important:" A9.txt > A9_Important.txt
+- 채점형
+- 질문 : test디렉토리의 A9.txt 파일에서 각 라인의 시작 부분에 "Important:"이라는 단어가 있는 라인을 찾고 그 결과를 A9_Important.txt에 저장하시오.
 - 답 : 채점 파일 실행
 
 

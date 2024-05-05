@@ -1,7 +1,7 @@
 {
-    "rebuild": true,
-    "target_build": true,
+    "rebuild": false,
+    "target_build": false,
     "target": {
-        "matrix": ["s1001_ls", "s1002_cd_pwd"]
+        "matrix": []
     }
 }

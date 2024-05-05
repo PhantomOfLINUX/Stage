@@ -40,14 +40,16 @@ jobs:
 
             - name: Set output
               id: set-matrix
-              run: echo "::set-output name=matrix::$(<dirs.json)"
+              run: |
+                  echo "matrix=$(ls -d */ | grep -E 's10[0-9]{2}_' | xargs -n 1 basename | jq -c .)" > $GITHUB_ENV/matrix.json
+                  echo "MATRIX_JSON=$(cat $GITHUB_ENV/matrix.json)" >> $GITHUB_ENV
 
     build-and-push:
         needs: prepare
         runs-on: ubuntu-latest
         strategy:
-            fail-fast: false
-            matrix: ${{fromJson(needs.prepare.outputs.matrix)}}
+          fail-fast: false
+          matrix: ${{fromJson(env.MATRIX_JSON)}}
         steps:
             - name: Check out code
               uses: actions/checkout@v3

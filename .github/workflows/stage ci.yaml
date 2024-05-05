@@ -11,6 +11,7 @@ jobs:
         runs-on: ubuntu-latest
         outputs:
             should-build: ${{ steps.check-config.outputs.rebuild }}
+            target-build: ${{ steps.check-config.outputs.target_build }}
 
         steps:
             - name: Check out code
@@ -20,7 +21,9 @@ jobs:
               id: check-config
               run: |
                   REBUILD=$(jq -r '.rebuild' image_tag.config.json)
+                  TARGET_BUILD=$(jq -r '.target_build' image_tag.config.json)
                   echo "::set-output name=rebuild::$REBUILD"
+                  echo "::set-output name=target_build::$TARGET_BUILD"
 
     prepare:
         needs: check-rebuild
@@ -41,7 +44,11 @@ jobs:
             - name: Set output
               id: set-matrix
               run: |
-                  matrix=$(cat dirs.json)
+                  if [ "${{ needs.check-rebuild.outputs.target-build }}" == "true" ]; then
+                    matrix=$(echo $(jq -r '.target' image_tag.config.json))
+                  else
+                    matrix=$(cat dirs.json)
+                  fi
                   echo "matrix=$(echo $matrix | jq -c .)" >> $GITHUB_OUTPUT
                   echo $matrix
 
@@ -67,9 +74,9 @@ jobs:
 
             - name: Build and push Docker image
               run: |
-                  echo "Context: $CONTEXT, Cleaned Tag: $CLEANED_TAG"
                   CONTEXT="${{ matrix.context }}"
                   CLEANED_TAG="${CONTEXT%%_*}"
+                  echo "Context: $CONTEXT, Cleaned Tag: $CLEANED_TAG"
                   docker build -f ./${CONTEXT}/${CONTEXT}.Dockerfile -t ${{ secrets.DOCKERHUB_ORGANIZATIONS }}/$CLEANED_TAG:latest ./${CONTEXT}
                   docker push ${{ secrets.DOCKERHUB_ORGANIZATIONS }}/$CLEANED_TAG:latest
                   echo "Docker image pushed: $CLEANED_TAG:latest"

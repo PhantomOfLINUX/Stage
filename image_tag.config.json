@@ -1,4 +1,7 @@
 {
     "rebuild": true,
-    "target": ["s1001"]
+    "target_build": true,
+    "target": {
+        "matrix": ["s1001", "s1002"]
+    }
 }

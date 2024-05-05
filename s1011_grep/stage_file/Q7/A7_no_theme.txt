@@ -1,8 +1,6 @@
 # Configuration Settings
 resolution=1920x1080
-theme=dark
 user_preference=enabled
 language=en
-theme=light
 volume_level=75
 backup_frequency=weekly

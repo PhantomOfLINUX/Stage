@@ -1,5 +1,0 @@
-John,Doe,45,New York
-Jane,Smith,30,Los Angeles
-Alice,Johnson,35,Chicago
-Bob,Brown,25,San Francisco
-Charlie,Miller,40,New York

@@ -75,4 +75,4 @@ jobs:
                   echo "Docker image pushed: $CLEANED_TAG:latest"
 
             - name: Cleanup Docker images
-              run: docker rmi `docker image ls -a -q`
+              run: docker rmi `docker image ls -a -q` || true

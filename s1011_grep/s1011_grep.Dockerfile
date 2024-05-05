@@ -1,9 +1,9 @@
 #ws_pty.js가 copy되어 있는 이미지를 가져온다.
-FROM polhub/ws-base:s1010
+FROM polhub/ws-base:s1011
 
 # 기존 환경 변수 및 사용자 설정을 유지할 수 있습니다.
-ENV stage=s1010
-ARG stage=s1010
+ENV stage=s1011
+ARG stage=s1011
 
 # 사용자 추가
 RUN useradd -ms /bin/bash $stage

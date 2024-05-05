@@ -1,0 +1,5 @@
+warning: Low disk space on drive D:.
+WARNING: Memory usage is above 90%.
+warning: You are using an outdated version.
+Warning: Unrecognized access detected.
+WARNING: Unable to read configuration file.

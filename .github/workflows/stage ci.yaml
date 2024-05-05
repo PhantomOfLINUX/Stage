@@ -39,15 +39,14 @@ jobs:
                   cat dirs.json
 
             - name: Set output
-              id: set-matrix
-              run: echo "::set-output name=matrix::$(<dirs.json)"
+              run: echo "matrix=$(cat dirs.json)" >> $GITHUB_ENV
 
     build-and-push:
         needs: prepare
         runs-on: ubuntu-latest
         strategy:
             fail-fast: false
-            matrix: ${{fromJson(needs.prepare.outputs.matrix)}}
+            matrix: ${{fromJson(env.matrix)}}
         steps:
             - name: Check out code
               uses: actions/checkout@v3

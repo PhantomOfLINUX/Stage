@@ -40,7 +40,10 @@ jobs:
 
             - name: Set output
               id: set-matrix
-              run: echo "matrix=$(cat dirs.json)" >> $GITHUB_OUTPUT
+              run: |
+                  matrix=$(cat dirs.json)
+                  echo "matrix=$matrix" >> $GITHUB_OUTPUT
+                  echo $matrix
 
     build-and-push:
         needs: prepare

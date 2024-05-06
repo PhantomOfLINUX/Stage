@@ -16,9 +16,6 @@ WORKDIR /home/$stage
 RUN echo | cat start.sh >> .bashrc
 RUN rm -rf start.sh
 
-#stagefile 폴더 생성
-RUN mkdir /usr/stage_file/Q1/check
-
 # 소유권 변경
 RUN chown -R $stage /home/$stage
 

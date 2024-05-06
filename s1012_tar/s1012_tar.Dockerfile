@@ -1,9 +1,9 @@
 #ws_pty.js가 copy되어 있는 이미지를 가져온다.
-FROM polhub/ws-base:s1011
+FROM polhub/ws-base:s1012
 
 # 기존 환경 변수 및 사용자 설정을 유지할 수 있습니다.
-ENV stage=s1011
-ARG stage=s1011
+ENV stage=s1012
+ARG stage=s1012
 
 # 사용자 추가
 RUN useradd -ms /bin/bash $stage
@@ -27,7 +27,7 @@ WORKDIR /home/$stage/test
 
 # Q1 환경 구성
 WORKDIR /home/$stage/test
-RUN cp /usr/stage_file/Q1/A1.txt /home/$stage/test/A1.txt
+RUN cp -r /usr/stage_file/Q1/documents /home/$stage/test/documents
 
 WORKDIR /usr/agent
 

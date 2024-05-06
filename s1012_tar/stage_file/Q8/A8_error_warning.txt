@@ -1,3 +1,0 @@
-System rebooted without any warnings or errors.
-There is another warning.
-It may habe more error.

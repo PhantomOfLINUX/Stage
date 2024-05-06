@@ -1,8 +1,0 @@
-Error: Failed to execute the script.
-Warning: Low battery.
-The operation completed successfully.
-Warning: You are running out of disk space.
-Error: Permission denied while accessing the file.
-System rebooted without any warnings or errors.
-There is another warning.
-It may habe more error.

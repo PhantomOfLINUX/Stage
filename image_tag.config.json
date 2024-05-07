@@ -1,7 +1,10 @@
 {
-    "rebuild": false,
-    "target_build": false,
+    "rebuild": true,
+    "target_build": true,
     "target": {
-        "matrix": []
+        "matrix": [
+            "s1011_grep",
+            "s1012_tar"
+        ]
     }
 }

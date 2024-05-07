@@ -1,0 +1,4 @@
+2:Failed to load the user profile.
+4:Failed: Network timeout during data transmission.
+9:Failed to authenticate API request.
+11:Failed attempts recorded in the security log.

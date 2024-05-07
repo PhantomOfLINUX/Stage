@@ -1,0 +1,4 @@
+There was an error processing your request.
+Sample error in this line: file not found.
+Look for errors like this one in your output.
+Final line, no errors here.

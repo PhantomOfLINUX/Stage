@@ -1,0 +1,3 @@
+A6-1.txt:localhost
+A6-3.txt:localhost
+A6-6.txt:localhost

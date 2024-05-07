@@ -1,0 +1,4 @@
+drwxrwxr-x ubuntu/ubuntu     0 2024-05-05 09:02 ./
+-rw-rw-r-- ubuntu/ubuntu    19 2024-05-05 08:40 ./summary.txt
+-rw-rw-r-- ubuntu/ubuntu    16 2024-05-05 08:40 ./note.txt
+-rw-rw-r-- ubuntu/ubuntu    18 2024-05-05 08:40 ./report.txt

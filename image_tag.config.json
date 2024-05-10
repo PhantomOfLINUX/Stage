@@ -1,5 +1,5 @@
 {
-    "rebuild": false,
+    "rebuild": true,
     "target_build": false,
     "target": {
         "matrix": [

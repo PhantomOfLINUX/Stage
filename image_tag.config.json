@@ -1,9 +1,9 @@
 {
-    "rebuild": false,
-    "target_build": false,
+    "rebuild": true,
+    "target_build": true,
     "target": {
         "matrix": [
-            "s1012_tar"
+            "s1013_gzip"
         ]
     }
 }

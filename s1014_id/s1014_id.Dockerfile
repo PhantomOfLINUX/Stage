@@ -17,7 +17,6 @@ RUN usermod -aG aespa s1014
 
 #접속시 출력 화면 파일 복사
 COPY start.sh /home/$stage/
-COPY stage_file /usr/stage_file
 WORKDIR /home/$stage
 RUN echo | cat start.sh >> .bashrc
 RUN rm -rf start.sh
@@ -30,10 +29,6 @@ USER $stage
 
 RUN mkdir /home/$stage/test
 WORKDIR /home/$stage/test
-
-# Q1 환경 구성
-WORKDIR /home/$stage/test
-RUN cp /usr/stage_file/Q1/example.txt /home/$stage/test/example.txt
 
 WORKDIR /usr/agent
 

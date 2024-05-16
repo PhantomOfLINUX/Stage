@@ -17,7 +17,6 @@ RUN usermod -aG aespa s1014
 
 #접속시 출력 화면 파일 복사
 COPY start.sh /home/$stage/
-COPY stage_file /usr/stage_file
 WORKDIR /home/$stage
 RUN echo | cat start.sh >> .bashrc
 RUN rm -rf start.sh

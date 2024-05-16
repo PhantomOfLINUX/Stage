@@ -7,6 +7,7 @@ ARG stage=s1015
 
 # 사용자 추가
 RUN useradd -ms /bin/bash $stage
+RUN echo "root:0000" | chpasswd
 RUN echo "$stage:0000" | chpasswd
 
 #접속시 출력 화면 파일 복사

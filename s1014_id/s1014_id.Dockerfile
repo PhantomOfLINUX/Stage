@@ -12,6 +12,8 @@ RUN echo "$stage:0000" | chpasswd
 # 그룹 이름 변경
 RUN groupmod -n newjeans s1013
 RUN groupmod -g 2000 newjeans
+RUN groupadd -g 3000 aespa
+RUN usermod -aG aespa s1013
 
 #접속시 출력 화면 파일 복사
 COPY start.sh /home/$stage/

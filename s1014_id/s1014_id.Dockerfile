@@ -10,7 +10,7 @@ RUN useradd -ms /bin/bash $stage
 RUN echo "$stage:0000" | chpasswd
 
 # 그룹 이름 변경
-RUN sudo groupmod -n newgroup s1013
+RUN groupmod -n newgroup s1013
 
 #접속시 출력 화면 파일 복사
 COPY start.sh /home/$stage/

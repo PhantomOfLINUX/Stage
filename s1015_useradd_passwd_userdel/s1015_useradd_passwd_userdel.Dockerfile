@@ -24,9 +24,6 @@ USER $stage
 RUN mkdir /home/$stage/test
 WORKDIR /home/$stage/test
 
-# Q1 환경 구성
-WORKDIR /home/$stage/test
-RUN cp /usr/stage_file/Q1/example.txt /home/$stage/test/example.txt
 
 WORKDIR /usr/agent
 

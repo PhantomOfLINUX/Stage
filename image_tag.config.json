@@ -2,6 +2,8 @@
     "rebuild": true,
     "target_build": true,
     "target": {
-        "matrix": ["s1014_id", "s1015_useradd"]
+        "matrix": [
+            "s1015_useradd"
+        ]
     }
 }

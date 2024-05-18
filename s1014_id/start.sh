@@ -12,7 +12,7 @@ echo -e "\x1b[38;2;255;255;0m    \|__|     \|_______|\|_______| \x1b[0m"
 echo " "
 echo $stage
 echo " "
-echo "You can learn [ id ]"
+echo "You can learn [ id ] and [ whoami ]"
 
 cd /home/$stage/
 #chmod 700 /home

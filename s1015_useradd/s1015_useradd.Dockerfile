@@ -25,7 +25,6 @@ USER $stage
 RUN mkdir /home/$stage/test
 WORKDIR /home/$stage/test
 
-
 WORKDIR /usr/agent
 
 # 웹소켓 서버 실행 명령. 'ws_pty.js'는 웹소켓 서버의 메인 파일이라고 가정합니다.

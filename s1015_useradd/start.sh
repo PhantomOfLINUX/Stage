@@ -14,5 +14,5 @@ echo $stage
 echo " "
 echo "You can learn [ useradd ]"
 
-cd /home/$stage/
+cd /root
 #chmod 700 /home

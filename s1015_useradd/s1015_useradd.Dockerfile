@@ -9,8 +9,8 @@ ARG stage=s1015
 RUN echo "root:0000" | chpasswd
 
 #접속시 출력 화면 파일 복사
-COPY start.sh /home
-WORKDIR /home
+COPY start.sh /root
+WORKDIR /root
 RUN echo | cat start.sh >> .bashrc
 RUN rm -rf start.sh
 

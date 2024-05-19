@@ -1,4 +1,4 @@
-# s1014 id
+# s1014 id (controller.js 파일 없음)
 ## 14-1
 - id (or id -un)
 - 단답형

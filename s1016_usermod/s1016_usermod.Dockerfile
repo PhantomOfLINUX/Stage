@@ -24,7 +24,7 @@ RUN useradd susan
 RUN useradd bob
 # 7번
 RUN useradd emma
-RUN groupaddd -g 6242 wat
+RUN groupadd -g 6242 wat
 
 
 #접속시 출력 화면 파일 복사

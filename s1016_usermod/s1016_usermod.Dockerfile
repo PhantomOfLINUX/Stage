@@ -19,7 +19,7 @@ RUN groupadd -g 4623 developers
 # 4번
 RUN useradd alex
 # 5번
-RUN usermode -susan
+RUN useradd susan
 # 6번
 RUN useradd bob
 # 7번

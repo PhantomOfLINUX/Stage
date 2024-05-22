@@ -20,11 +20,11 @@ RUN git clone https://github.com/wolfcw/libfaketime.git && \
 
 # 시스템 시간을 2023-01-01로 변경 후 계정 생성
 RUN ln -fs /usr/share/zoneinfo/UTC /etc/localtime && \
+    LD_PRELOAD=/usr/local/lib/faketime/libfaketime.so.1 FAKETIME="2023-01-01 12:00:00" useradd -m user1 && \
     LD_PRELOAD=/usr/local/lib/faketime/libfaketime.so.1 FAKETIME="2023-01-01 12:00:00" useradd -m user2 && \
     LD_PRELOAD=/usr/local/lib/faketime/libfaketime.so.1 FAKETIME="2023-01-01 12:00:00" useradd -m user3 && \
     LD_PRELOAD=/usr/local/lib/faketime/libfaketime.so.1 FAKETIME="2023-01-01 12:00:00" useradd -m user4 && \
-    LD_PRELOAD=/usr/local/lib/faketime/libfaketime.so.1 FAKETIME="2023-01-01 12:00:00" useradd -m user5 && \
-    LD_PRELOAD=/usr/local/lib/faketime/libfaketime.so.1 FAKETIME="2023-01-01 12:00:00" useradd -m user6
+    LD_PRELOAD=/usr/local/lib/faketime/libfaketime.so.1 FAKETIME="2023-01-01 12:00:00" useradd -m user5
 
 
 # 사용자 추가

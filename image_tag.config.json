@@ -3,7 +3,7 @@
     "target_build": true,
     "target": {
         "matrix": [
-            "s1017_userdel"
+            "s1018_passwd"
         ]
     }
 }

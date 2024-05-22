@@ -1,9 +1,9 @@
 {
-    "rebuild": false,
+    "rebuild": true,
     "target_build": true,
     "target": {
         "matrix": [
-            "s1018_passwd"
+            "s1019_chage"
         ]
     }
 }

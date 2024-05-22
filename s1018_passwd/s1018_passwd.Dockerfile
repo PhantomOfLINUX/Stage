@@ -40,8 +40,6 @@ RUN echo "root:0000" | chpasswd
 # 6번
 # RUN useradd user6
 
-# 기본 시스템 시간 복원
-RUN rm /etc/profile.d/faketime.sh
 
 #접속시 출력 화면 파일 복사
 COPY start.sh /root

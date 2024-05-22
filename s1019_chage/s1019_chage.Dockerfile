@@ -9,6 +9,7 @@ ARG stage=s1019
 RUN echo "root:0000" | chpasswd
 # 1번
 RUN useradd user1
+RUN chage -M 30 user1
 RUN chage -I 10 user1
 # 2번
 RUN useradd john

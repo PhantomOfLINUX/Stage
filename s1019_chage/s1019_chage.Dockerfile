@@ -1,16 +1,17 @@
 #ws_pty.js가 copy되어 있는 이미지를 가져온다.
-FROM polhub/ws-base:s1017
+FROM polhub/ws-base:s1019
 
 # 기존 환경 변수 및 사용자 설정을 유지할 수 있습니다.
-ENV stage=s1017
-ARG stage=s1017
+ENV stage=s1019
+ARG stage=s1019
 
 # 사용자 추가
 RUN echo "root:0000" | chpasswd
 # 1번
-RUN useradd testuser
+RUN useradd user1
+RUN chage -I 10 user1
 # 2번
-RUN useradd testuser2
+RUN useradd john
 
 
 #접속시 출력 화면 파일 복사

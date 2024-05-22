@@ -15,4 +15,4 @@ echo " "
 echo "You can learn [ chage ]"
 
 cd /root
-#chmod 700 /home
+#chmod 700 /home 

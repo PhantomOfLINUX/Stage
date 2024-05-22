@@ -20,22 +20,25 @@ RUN git clone https://github.com/wolfcw/libfaketime.git && \
 
 # 시스템 시간을 2023-01-01로 변경 후 계정 생성
 RUN ln -fs /usr/share/zoneinfo/UTC /etc/localtime && \
-echo "faketime '2023-01-01 12:00:00'" > /etc/profile.d/faketime.sh && \
-source /etc/profile.d/faketime.sh && \
-useradd -m testuser
+    LD_PRELOAD=/usr/local/lib/faketime/libfaketime.so.1 FAKETIME="2023-01-01 12:00:00" useradd -m user2 && \
+    LD_PRELOAD=/usr/local/lib/faketime/libfaketime.so.1 FAKETIME="2023-01-01 12:00:00" useradd -m user3 && \
+    LD_PRELOAD=/usr/local/lib/faketime/libfaketime.so.1 FAKETIME="2023-01-01 12:00:00" useradd -m user4 && \
+    LD_PRELOAD=/usr/local/lib/faketime/libfaketime.so.1 FAKETIME="2023-01-01 12:00:00" useradd -m user5 && \
+    LD_PRELOAD=/usr/local/lib/faketime/libfaketime.so.1 FAKETIME="2023-01-01 12:00:00" useradd -m user6
+
 
 # 사용자 추가
 RUN echo "root:0000" | chpasswd
 # 2번
-RUN useradd user2
+# RUN useradd user2
 # 3번
-RUN useradd user3
+# RUN useradd user3
 # 4번
-RUN useradd user4
+# RUN useradd user4
 # 5번
-RUN useradd user5
+# RUN useradd user5
 # 6번
-RUN useradd user6
+# RUN useradd user6
 
 # 기본 시스템 시간 복원
 RUN rm /etc/profile.d/faketime.sh

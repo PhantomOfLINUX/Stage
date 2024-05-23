@@ -1,9 +1,7 @@
 {
-    "rebuild": true,
+    "rebuild": false,
     "target_build": true,
     "target": {
-        "matrix": [
-            "s1019_chage"
-        ]
+        "matrix": []
     }
 }

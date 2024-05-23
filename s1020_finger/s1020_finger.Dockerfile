@@ -15,6 +15,7 @@ RUN dnf -y install epel-release
 RUN dnf repolist
 
 # finger 설치
+RUN dnf search finger
 RUN dnf -y install finger
 RUN dnf clean all
 

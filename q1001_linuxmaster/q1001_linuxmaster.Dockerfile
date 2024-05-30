@@ -28,7 +28,7 @@ RUN echo "root:0000" | chpasswd
 # 2번
 RUN useradd ihduser
 RUN groupadd -g 2914 kait
-RUN usermod -g kait mike
+RUN usermod -g kait ihduser
 RUN groupadd -g 4623 admin
 # 3번
 RUN yum -y install xfsprogs

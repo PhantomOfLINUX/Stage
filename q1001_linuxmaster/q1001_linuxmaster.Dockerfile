@@ -37,7 +37,9 @@ RUN yum -y install cronie
 # 6번
 RUN mkdir /home/test
 RUN cp /usr/stage_file/Q6/sum.c /home/test/sum.c
-
+# 8번
+RUN mkdir /home/test/srcs
+RUN cp -r /usr/stage_file/Q8/source/* /home/test/srcs/
 
 # 사용자 변경
 WORKDIR /usr/agent

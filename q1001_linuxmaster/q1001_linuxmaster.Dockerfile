@@ -40,6 +40,16 @@ RUN cp /usr/stage_file/Q6/sum.c /home/test/sum.c
 # 8번
 RUN mkdir /home/test/srcs
 RUN cp -r /usr/stage_file/Q8/source/* /home/test/srcs/
+# 9번
+RUN yum -y install kmod
+# 10번
+RUN yum -y install lvm2
+# 12번
+RUN yum -y install rsyslog
+# 14번
+
+
+
 
 # 사용자 변경
 WORKDIR /usr/agent

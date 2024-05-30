@@ -46,7 +46,10 @@ RUN yum -y install kmod
 RUN yum -y install lvm2
 # 12번
 RUN yum -y install rsyslog
-# 14번
+# 15번
+RUN yum -y install policycoreutils
+# 16번
+RUN dnf -y install rsync
 
 
 

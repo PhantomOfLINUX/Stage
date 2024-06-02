@@ -6,7 +6,7 @@ ENV stage=q1001
 ARG stage=q1001
 
 # 패키지 업데이트
-RUN dnf update
+RUN dnf -y update
 
 #접속시 출력 화면 파일 복사
 COPY start.sh /root

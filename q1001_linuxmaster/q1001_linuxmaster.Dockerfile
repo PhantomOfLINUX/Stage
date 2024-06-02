@@ -46,10 +46,13 @@ RUN yum -y install kmod
 RUN yum -y install lvm2
 # 12번
 RUN yum -y install rsyslog
+RUN sed -i '/^\*\.emerg/d' /etc/rsyslog.conf
 # 15번
 RUN yum -y install policycoreutils
 # 16번
 RUN dnf -y install rsync
+# 17번
+RUN dnf -y install samba
 
 
 

@@ -1,7 +1,7 @@
 {
     "rebuild": true,
-    "target_build": true,
+    "target_build": false,
     "target": {
-        "matrix": ["q1001_linuxmaster"]
+        "matrix": []
     }
 }

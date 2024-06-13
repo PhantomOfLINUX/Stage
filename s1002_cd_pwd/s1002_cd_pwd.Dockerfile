@@ -2,8 +2,8 @@
 FROM polhub/ws-base:s1002
 
 # 기존 환경 변수 및 사용자 설정을 유지할 수 있습니다.
-ENV stage=stage_cd_pwd
-ARG stage=stage_cd_pwd
+ENV stage=stage02
+ARG stage=stage02
 
 # 사용자 추가
 RUN useradd -ms /bin/bash $stage

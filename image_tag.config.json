@@ -2,6 +2,6 @@
     "rebuild": true,
     "target_build": false,
     "target": {
-        "matrix": []
+        "matrix": ["s1001_ls", "s1002_cd_pwd"]
     }
 }
